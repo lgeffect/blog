@@ -1,5 +1,15 @@
 <html>
 	<head><title>LGE blog</title></head>
 	<body>
+	<div>
+		<h1>DJANGO TEST APP</h1>
+	</div>
+
+	{% for post in posts %}
+		<div>
+		<p>published: {{ post.publish_date }}</p>
+		<h5>{{ post.title }}</h5>
+		<p>{{ post.text|linebreaksbr }} </p>
+	{% endfor %}
 	</body>
 </html>
